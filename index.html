@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Karthik Singh </title>
+	<meta name="viewport" content="width=device-width , initial-scale=1, maximum-scale=1, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<script src="script.js"></script>
+	<!--	<script src="jquery-3.4.1.min.js"></script> -->
+	<!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+	<script src="jquery-3.4.1.js"></script>
+	<!--<script src="http://code.jquery.com/color/jquery.color.min.js"></script>-->
+	<script src="jquery.color.min.js"></script>
+
+
+	<script src="jquery.transit.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			var isOpen = false;
+			$('#gform').submit(function (evt) {
+				evt.preventDefault(); //prevents the default action
+				console.log("(submit) email");
+			});
+
+
+			$('.menu').click(function () {
+				console.log("clicked menu");
+				//$('.ul').toggleClass('active1');
+				if (isOpen == false) {
+					$('.navbar').slideDown();
+					$('#change-op').css("background-color", "rgba(10,10,40,0.8)");
+					//$('.toggle').css("background", "rgba(42, 176, 227, 0.95)");
+					//$('.toggle').animate({backgroundColor : "#f6ad55"}, 500);
+					$(".toggle").transition({ "-webkit-transform": "rotate(45deg)", backgroundColor: "#f6ad55" }, 300);
+					isOpen = true;
+
+				} else {
+					$('.navbar').slideUp(30);
+					$(".toggle").transition({ "-webkit-transform": "rotate(180deg)", backgroundColor: "#2ab0e3" }, 300);
+					isOpen = false;
+					setTimeout(function () { $('#change-op').css("background-color", "rgba(0,0,0,0)"); }, 30);
+					//$('.toggle').animate({backgroundColor : "#2ab0e3"}, 500);
+
+				}
+
+
+
+
+			});
+
+			$('.main-list').click(function () {
+				var swidth = $(window).width();
+				if (swidth < 767) {
+					$('.navbar').slideUp(30);
+					setTimeout(function () { $('#change-op').css("background-color", "rgba(0,0,0,0)"); }, 300);
+					$(".toggle").transition({ "-webkit-transform": "rotate(180deg)", backgroundColor: "#2ab0e3" }, 300);
+				}
+			});
+
+
+
+
+
+			$(window).resize(function () {
+				var swidth = $(window).width();
+				//console.log(swidth);
+				if (swidth > 767) {
+					console.log("more than 767");
+					//	$('.navbar').slideUp();
+					//    isOpen = false;
+					$('#change-op').css("background-color", "rgba(0,0,0,8)");
+
+					$('.navbar').show();
+				}
+				else {
+					$('#change-op').css("background-color", "rgba(0,0,0,0)");
+					$('.navbar').hide();
+					isOpen = false;
+				}
+
+			});
+
+
+
+
+
+
+
+		});
+	</script>
+	<script src="https://code.iconify.design/1/1.0.5/iconify.min.js"></script>
+</head>
+
+<link rel="icon" href="kclear2.jpg" type="image/x-icon">
+
+<body class="body">
+
+	<div id="loading"></div>
+
+	<!-- header -->
+
+	<header class="header" id="change-op">
+		<div class="container">
+			<div class="row">
+				<div class="brand-name" style="font-size: 35px">
+
+					<a href="" class="logo">karthik</a>
+
+				</div>
+				<div class="ham-burger">
+
+				</div>
+				<div class="toggle">
+					<i class="fa fa-bars menu" aria-hidden="true"></i>
+				</div>
+
+				<!-- rm-->
+			</div>
+
+			<div class="navbar" id="navbarID">
+
+				<ul class="main-list">
+					<li><a href="#home" class="active">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#skills">Visualization</a></li>
+					<li><a href="#projects">SVG demo</a></li>
+					<li><a href="#exprience">Credits</a></li>
+
+				</ul>
+
+
+			</div>
+
+	</header>
+
+	<!-- header end -->
+
+
+	<!-- start home -->
+	<section class="home" id="home">
+		<div class="vid-class" style="position: relative; text-align: center;">
+			<div class="introduction">
+				<div class="block">
+					<h6>Hi, I'm</h6>
+					<h1 class="">Karthik Singh</h1>
+					
+			
+				</div>
+
+
+			</div>
+			<!--
+
+<div class="mobile-block" style="position: absolute; color: #ffffff; bottom: 0; padding-bottom: 20px; padding-left: 15px; border-left: 3px solid #ffffff; margin-left: 15px; margin-bottom: 30px; padding-top: 5px">
+	<h6 style="font-size: 20px; margin-bottom: 0; margin-top: 0;">Hii, this is </h6>
+	<h1 style="font-size: 30px; margin-bottom: 0; margin-top: 0;">Karthik Singh</h1>
+	<h3 style="margin-top: 2px; margin-bottom: 2px;">Application developer</h3>
+	<div class="cv-btn"> https://drive.google.com/file/d/19C3yeCdjKT68rlueeIDlDnDSjw1JIVzX/view?usp=sharing
+					<a style="z-index: -1;" href="https://drive.google.com/file/d/1Pzw86ZGO05W8LZmP6mNh3et2uxzqMGnn/view?usp=sharing" download>Download Resume</a>
+				</div>
+	</div>
+-->
+
+			<video class="video" id="video" align="center" id="bgvideo" loop autoplay="autoplay" autoplay loop muted
+				preload="auto" poster="poster3.jpg" style="">
+				<source id="videosource" src="n.mp4" type="video/mp4" />
+
+			</video>
+
+
+			<div class="mobile-intro" style="position: relative;">
+
+
+			</div>
+			<!--
+		<div class="container">
+
+
+			<div class="row full-screen">
+			<div class="home-content">
+				<div class="block">
+				<h6>Hi, this is </h6>
+				<h1 class="">Karthik Singh</h1>
+				<h3>Application developer</h3>
+				<div class="cv-btn">
+					<a href="https://drive.google.com/file/d/1Pzw86ZGO05W8LZmP6mNh3et2uxzqMGnn/view?usp=sharing" download>Download Resume</a>
+				</div>
+			</div>
+			</div>
+			</div>
+		</div>
+		-->
+		</div>
+	</section>
+	<!-- end home -->
+
+	<!-- about section start -->
+
+	<section class="about-me" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="section-title">
+					<h1 class="wow bounceIn">About Me</h1>
+					<p class="small text-uppercase"></p>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="about-content">
+					<div class="row">
+						<div class="img">
+							<img src="images/about-me.jpg" alt="about-me">
+						</div>
+						<div class="text">
+							<h4>Who am I?</h4>
+							<h6>- An <span> Application Developer </span> based in <span>Chicago, USA</span> </h6>
+							<p class="top-space">Currently pursuing masters of CS at University of Illinois at Chicago.
+								I am also a Computer Science Engineer with a work experience of 3 &frac12; years
+								aspiring to build web applications of tomorrow. I have knowledge in a vast variety of
+								technologies and can develop applications for various platforms. My best area would be
+								rapid prototyping, building mobile applications and backend services.</p>
+							<div class="info">
+								<div class="list">
+									<label>Birthday:</label>
+									<p>30th january 1996</p>
+								</div>
+								<div class="list">
+									<label>Email:</label>
+									<p>ksingh49@uic.edu</p>
+								</div>
+								<div class="list">
+									<label>Age:</label>
+									<p> 26 Yr</p>
+								</div>
+								<div class="list">
+									<label>Phone</label>
+									<p> 3129004175</p>
+								</div>
+								<div class="list">
+									<label>Residence:</label>
+									<p> USA</p>
+								</div>
+								<div class="list">
+									<label>Address:</label>
+									<p>914 South Miller St</p>
+								</div>
+								<div class="list">
+									<label>Freelance:</label>
+									<p>Unavailable</p>
+								</div>
+
+							</div>
+
+
+							<div class="social-links">
+								<a href="https://www.linkedin.com/in/karthik-singh-2a3442128/" target="_blank"><i
+										class="fa fa-linkedin"></i></a>
+								<a href="https://github.com/karthik-36" target="_blank"><i class="fa fa-github"></i></a>
+								<a href="https://leetcode.com/karthiksingh/" target="_blank"><i
+										class="fa fa-leetcode"><span class="iconify" data-icon="simple-icons:leetcode"
+											data-inline="false"></span></i></a>
+
+								<!--	<a href="https://github.com/karthik-36" target="_blank"><i class="fa fa-github"></i></a> -->
+
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!-- about section end-->
+
+
+	<!-- start skills -->
+	<section class="skills" id="skills">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="skills-content">
+					<div class="row">
+
+						<div class="section-title">
+							<h1>Data Visualization</h1>
+							<p style="font-size: 22; font-weight: 600"></p>
+						</div>
+					</div>
+					<div class="row">
+
+						<div class="web">
+
+							<h2>I follow the subreddit r/dataisbeautiful (data is beautiful) which is a gold mine for data visualization posts. here are my top 3 picks</h2>
+
+							<p> The the first visualization on the top- right shows the  This is a great graphic. I was able to look at it and understand it without needing an explanation </p>
+						
+							
+
+							<div class="flex-skill-img">
+
+							
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<img id="img1" class="wow bounceIn" src="images/edu.JPG" alt="skill" style=" width: 100%;">
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="img" id="skill-image">
+					<img id="top-skill-img" class="wow bounceInRight" src="images/dem.JPG" alt="skill"
+						style="height: 600px; width: 100%;">
+					<img class="wow bounceInRight" src="images/edu.JPG" alt="skill"
+						style="height: 450px; width: 100%;">
+					<img class="wow bounceInRight" src="images/sni.JPG" alt="skill" style="">
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+	<!-- end skills -->
+
+
+
+
+
+	<!-- Project section-->
+	<section class="projects" id="projects">
+		<div class="projects">
+			<div class="section-title">
+
+
+
+
+				<div class="project-gear-flex">
+
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						style="margin: auto; background: none; display: block; shape-rendering: auto;" width="110px"
+						height="110px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+						<g transform="translate(50 50)">
+							<g transform="rotate(29.4442)">
+								<animateTransform attributeName="transform" type="rotate" values="0;45" keyTimes="0;1"
+									dur="0.3s" repeatCount="indefinite"></animateTransform>
+								<path
+									d="M25.17439175034821 -6.5 L33.17439175034821 -6.5 L33.17439175034821 6.5 L25.17439175034821 6.5 A26 26 0 0 1 22.39717719663046 13.204789041205341 L22.39717719663046 13.204789041205341 L28.05403144612284 18.86164329069772 L18.861643290697724 28.05403144612284 L13.204789041205343 22.39717719663046 A26 26 0 0 1 6.5 25.17439175034821 L6.5 25.17439175034821 L6.5 33.17439175034821 L-6.499999999999997 33.17439175034821 L-6.499999999999997 25.17439175034821 A26 26 0 0 1 -13.204789041205334 22.39717719663046 L-13.204789041205334 22.39717719663046 L-18.861643290697714 28.05403144612284 L-28.05403144612284 18.861643290697717 L-22.39717719663046 13.204789041205338 A26 26 0 0 1 -25.174391750348207 6.500000000000007 L-25.174391750348207 6.500000000000007 L-33.17439175034821 6.500000000000008 L-33.17439175034821 -6.500000000000001 L-25.17439175034821 -6.500000000000002 A26 26 0 0 1 -22.397177196630462 -13.204789041205332 L-22.397177196630462 -13.204789041205332 L-28.054031446122842 -18.86164329069771 L-18.86164329069772 -28.05403144612284 L-13.204789041205341 -22.39717719663046 A26 26 0 0 1 -6.500000000000009 -25.174391750348207 L-6.500000000000009 -25.174391750348207 L-6.500000000000011 -33.17439175034821 L6.499999999999997 -33.17439175034821 L6.499999999999999 -25.17439175034821 A26 26 0 0 1 13.204789041205332 -22.397177196630462 L13.204789041205332 -22.397177196630462 L18.86164329069771 -28.054031446122842 L28.05403144612284 -18.86164329069772 L22.39717719663046 -13.204789041205341 A26 26 0 0 1 25.174391750348207 -6.50000000000001 M0 -18A18 18 0 1 0 0 18 A18 18 0 1 0 0 -18"
+									fill="#e15b64"></path>
+							</g>
+						</g>
+						<!-- [ldio] generated by https://loading.io/ -->
+					</svg>
+
+					<h1>SVG   Demo</h1>
+
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						style="margin: auto; background: none; display: block; shape-rendering: auto;" width="110px"
+						height="110px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+						<g transform="translate(50 50)">
+							<g transform="rotate(29.4442)">
+								<animateTransform attributeName="transform" type="rotate" values="0;45" keyTimes="0;1"
+									dur="0.3s" repeatCount="indefinite"></animateTransform>
+								<path
+									d="M25.17439175034821 -6.5 L33.17439175034821 -6.5 L33.17439175034821 6.5 L25.17439175034821 6.5 A26 26 0 0 1 22.39717719663046 13.204789041205341 L22.39717719663046 13.204789041205341 L28.05403144612284 18.86164329069772 L18.861643290697724 28.05403144612284 L13.204789041205343 22.39717719663046 A26 26 0 0 1 6.5 25.17439175034821 L6.5 25.17439175034821 L6.5 33.17439175034821 L-6.499999999999997 33.17439175034821 L-6.499999999999997 25.17439175034821 A26 26 0 0 1 -13.204789041205334 22.39717719663046 L-13.204789041205334 22.39717719663046 L-18.861643290697714 28.05403144612284 L-28.05403144612284 18.861643290697717 L-22.39717719663046 13.204789041205338 A26 26 0 0 1 -25.174391750348207 6.500000000000007 L-25.174391750348207 6.500000000000007 L-33.17439175034821 6.500000000000008 L-33.17439175034821 -6.500000000000001 L-25.17439175034821 -6.500000000000002 A26 26 0 0 1 -22.397177196630462 -13.204789041205332 L-22.397177196630462 -13.204789041205332 L-28.054031446122842 -18.86164329069771 L-18.86164329069772 -28.05403144612284 L-13.204789041205341 -22.39717719663046 A26 26 0 0 1 -6.500000000000009 -25.174391750348207 L-6.500000000000009 -25.174391750348207 L-6.500000000000011 -33.17439175034821 L6.499999999999997 -33.17439175034821 L6.499999999999999 -25.17439175034821 A26 26 0 0 1 13.204789041205332 -22.397177196630462 L13.204789041205332 -22.397177196630462 L18.86164329069771 -28.054031446122842 L28.05403144612284 -18.86164329069772 L22.39717719663046 -13.204789041205341 A26 26 0 0 1 25.174391750348207 -6.50000000000001 M0 -18A18 18 0 1 0 0 18 A18 18 0 1 0 0 -18"
+									fill="#e15b64"></path>
+							</g>
+						</g>
+						<!-- [ldio] generated by https://loading.io/ -->
+					</svg>
+
+				</div>
+			
+			</div>
+			
+		</div>
+	</section>
+	<!-- Project section end-->
+
+
+
+
+
+
+
+
+
+
+	<!-- Exprience section-->
+	<section class="exprience" id="exprience">
+		<div class="section-title">
+			<h1>CREDITS</h1>
+
+		</div>
+
+		<h2> HTML  </h2>
+		<p> HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. Tags directly introduce content into the page. Other tags such as surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags but use them to interpret the content of the page.</p>
+		<p> </p>
+
+		<h2> CSS  </h2>
+		<p> Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+		<p> </p>
+
+		<h2> Javascript </h2>
+		<p> JavaScript  often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.</p>
+		<p> </p>
+
+		<h2> JQuery </h2>
+		<p> jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License. As of Aug 2022, jQuery is used by 77% of the 10 million most popular websites. Web analysis indicates that it is the most widely deployed JavaScript library by a large margin, having at least 3 to 4 times more usage than any other JavaScript library. </p>
+		<p> </p>
+
+		<h2> SVG</h2>
+		<p>Scalable Vector Graphics (SVG) is an XML-based vector image format for defining two-dimensional graphics, having support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999. </p>
+		<p> </p>
+
+		<h2> Data Visualization website </h2>
+		<p> I have taken my visualization from a subreddit (in reddit) called r/dataisbeautiful </p>
+		<p> </p>
+
+
+	</section>
+	<!-- Exprience section end-->
+
+
+
+
+
+
+
+	<!-- start footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="logo">
+					Karthik
+				</div>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/karthik-singh-2a3442128/" target="_blank"><i
+							class="fa fa-linkedin"></i></a>
+					<a href="https://github.com/karthik-36" target="_blank"><i class="fa fa-github"></i></a>
+					<a href="https://leetcode.com/karthiksingh/" target="_blank"><i class="fa fa-leetcode"><span
+								class="iconify" data-icon="simple-icons:leetcode" data-inline="false"></span></i></a>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+	<section class="copyright">
+		<div>
+			<p class="">&copy; Karthik Singh, 2019</p>
+
+		</div>
+	</section>
+
+
+	<section id="banner">
+
+	</section>
+
+
+	<script type="text/javascript">
+		/*
+	var preloader = document.getElementById('loading');
+	function loadFunction(){
+		preloader.style.display = 'none';
+	}
+	*/
+
+	</script>
+
+	<script src="wow.min.js"></script>
+	<script>
+
+		new WOW().init();
+	</script>
+
+	
+
+</body>
+
+</html>
+
+
+
+<!--
+
+	<div class="project1">
+	<div class="project-details">
+	<h1 class="project-title">Wings out!</h1>
+	<p>A fighter plane Mobile game made with unity</p>
+
+
+	</div>
+	<div class="video-n-detail-holder">
+	<div class="video-flex">
+	<iframe id="p1" class="wow jackInTheBox faster" width="1280" height="490" src="https://www.youtube.com/embed/FDNh4Z6AEBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<div class="video-details">
+		<p></p>
+	</div>
+	</div>
+	</div>
+
+
+	<div class="project2">
+	<div class="project-details">
+	<h1>RUBBER BAND OF DOOM</h1>
+	<p> hooked up a pen refil with rubber band and several servo motors. This was the result. </p>
+	</div>
+	<iframe id="p2" class="wow jackInTheBox faster" width="1280" height="490" src="https://www.youtube.com/embed/53v_kKcumQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+-->
